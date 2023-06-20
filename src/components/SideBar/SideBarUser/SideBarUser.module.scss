@@ -1,0 +1,36 @@
+@import '../../../variables.scss';
+
+.sideBarUser {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+
+  img {
+    height: 42px;
+    width: 42px;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $mainTextColor;
+  }
+}
+
+.sideBarUserInf {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $userInfoTextColor;
+}
+
+
+
+@media (max-width: 1000px) {
+  .sideBarUser {
+    display: none;
+
+  }  
+}

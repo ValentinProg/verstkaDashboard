@@ -1,0 +1,158 @@
+@import "../../../variables.scss";
+
+.sideBarLinks {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.sideBarLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px;
+  margin-bottom: 17px;
+  font-weight: 500;
+  font-size: 14px;
+
+  span {
+    color: $linksTextColor;
+  }
+}
+
+.sideBarLinkInfo {
+  display: flex;
+  gap: 16px;
+}
+
+.sideBarLink:hover {
+  background-color: $bgLinksActiveColor;
+  border-radius: 8px;
+
+  span {
+    color: $activeLinkTextColor;
+  }
+
+  .hoverStroke * {
+    stroke: $activeLinkTextColor;
+  }
+
+  .hoverFill * {
+    fill: $activeLinkTextColor;
+  }
+
+  .hoverUser path:nth-child(odd) {
+    fill: $activeLinkTextColor;
+  }
+
+  .hoverUser path:nth-child(even) {
+    stroke: $activeLinkTextColor;
+  }
+}
+
+.activeLink {
+  background-color: $bgLinksActiveColor;
+  border-radius: 8px;
+
+  span {
+    color: $activeLinkTextColor;
+  }
+  .hoverStroke * {
+    stroke: $activeLinkTextColor;
+  }
+
+  .hoverFill * {
+    fill: $activeLinkTextColor;
+  }
+
+  .hoverUser path:nth-child(odd) {
+    fill: $activeLinkTextColor;
+  }
+
+  .hoverUser path:nth-child(even) {
+    stroke: $activeLinkTextColor;
+  }
+}
+
+@media (max-width: 1150px) {
+  .sideBarLink {
+    padding: 6px;
+    span {
+    }
+
+    svg:last-child {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .sideBarLinks {
+    flex-direction: row;
+  }
+  .sideBarLink {
+    padding: 5px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .sideBarLinkInfo {
+    padding: 0px 10px 0px 10px;
+    gap: 2px;
+  }
+}
+
+@media (max-width: 780px) {
+
+  
+
+
+.sideBarLinkInfo {
+padding: 1px;
+margin: 0px;
+}
+
+  .sideBarLink {
+    margin: 1px;
+    padding: 3px;
+  
+    
+    font-size: 14px;
+  svg {
+    display: none;
+  }
+ 
+  }
+
+
+  // .sideBarLinks {
+  //   flex-direction: column;
+  // }
+
+  // .sideBarLink {
+  //   width: 100%;
+
+  //   padding: 13px;
+  //   margin-bottom: 17px;
+  //   font-weight: 500;
+  //   font-size: 14px;
+  //   font-size: 20px;
+
+  //   svg {
+  //     margin-right: 30px;
+
+  //     &:last-child {
+  //       display: flex;
+  //     }
+  //   }
+  // }
+}
+
+@media (max-width: 420px) {
+
+  .sideBarLink {
+    font-size: 10px;
+  }
+
+}

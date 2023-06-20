@@ -1,0 +1,93 @@
+@import "../../variables.scss";
+
+.sideBar {
+  width: 306px;
+  background-color: $bgCardColor;
+//  height: 100vh;
+  min-height: 100vh;
+z-index: 2;
+position: relative;
+
+}
+
+// .sideBar::before {
+//   content: '';
+//   position: absolute;
+//   background-color: antiquewhite;
+//   width: 100%;
+//   height: 100%;
+//   z-index: -1;
+// }
+
+.sideBarContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 36px 28px 76px 28px;
+}
+
+// .sideBarBurger {
+//   // display: none;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
+
+@media (max-width: 1300px) {
+  .sideBar {
+    width: 260px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .sideBar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sideBar {
+    min-height: auto;
+    width: auto;
+  }
+  .sideBarContent {
+    justify-content: none;
+    padding: 30px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .sideBarMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 780px) {
+
+
+  .sideBar {
+
+  position: fixed;
+  width: 100%;
+  
+  }
+
+  // .sideBar {
+  //   // height: 100vh;
+  // }
+
+  // .sideBarBurger {
+  //   display: block;
+  //   cursor: pointer;
+  //   padding: 20px;
+  // }
+
+  // .sideBarContent {
+
+  // flex-direction: column;
+  // }
+  
+}

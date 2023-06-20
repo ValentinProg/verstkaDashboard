@@ -1,0 +1,64 @@
+@import "../../../variables.scss";
+
+.mainFotter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 32px;
+}
+
+.mainFotterInfo {
+  font-size: 14px;
+  line-height: 21px;
+  color: $tableTextColor;
+}
+
+.mainFotterPages {
+  button {
+    padding: 0px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: $mainFooterTextColor;
+    background: $bgMainFotterNumbersColor;
+    border: 1px solid $borderColor;
+    border-radius: 4px;
+
+    &:hover {
+      background: $bgLinksActiveColor;
+      color: $activeLinkTextColor;
+    }
+  }
+  span {
+    margin-right: 12px;
+    color: $mainTextColor;
+  }
+}
+
+.mainFotterPages button:nth-child(2) {
+  background: $bgLinksActiveColor;
+  color: $activeLinkTextColor;
+}
+
+@media (max-width: 780px) {
+  .mainFotter {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .mainFotterInfo {
+    display: none;
+  }
+
+  .mainFotterPages {
+    button {
+      margin-right: 6px;
+    }
+  }
+}

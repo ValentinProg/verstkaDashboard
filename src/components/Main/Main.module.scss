@@ -1,0 +1,64 @@
+@import "../../variables.scss";
+
+.main {
+  padding: 41px 0px 258px 0px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 51px;
+}
+
+.mainContent {
+  padding: 30px 40px 40px 40px;
+  background-color: $bgCardColor;
+  box-shadow: 0px 10px 60px $mainBorderShadowColor;
+  border-radius: 30px;
+}
+
+@media (max-width: 1150px) {
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+  .mainContent {
+    padding: 15px 20px 20px 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    padding: 20px;
+  }
+
+  h2 {
+    display: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mainContent {
+    margin-top: 100px;
+    width: 410px;
+  }
+}
+
+@media (max-width: 420px) {
+  .main {
+    padding: 0px;
+  }
+
+  .mainContent {
+    padding: 10px 5px 5px 5px;
+    width: 300px;
+  }
+}

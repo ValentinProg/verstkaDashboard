@@ -1,0 +1,162 @@
+@import "../../../variables.scss";
+
+.mainTable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bgCardColor;
+
+  span {
+    font-weight: 500;
+    font-size: 24px;
+    color: $mainTextColor;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 47vw;
+  }
+
+  table {
+    text-align: left;
+    // overflow: hidden;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    border-collapse: collapse;
+  }
+
+  th {
+    padding: 0px 20px 14px 20px;
+    border-bottom: 1px solid $borderColor;
+    color: $tableTextColor;
+    font-weight: 500;
+    font-size: 14px;
+
+    &:last-child {
+      text-align: center;
+      padding-right: 0px;
+    }
+
+    &:first-child {
+      padding-left: 0px;
+    }
+  }
+
+  td {
+    padding: 24px;
+    border-bottom: 1px solid $borderColor;
+    white-space: nowrap;
+    font-size: 14px;
+
+    &:last-child {
+      padding-right: 0px;
+    }
+
+    &:first-child {
+      padding-left: 0px;
+    }
+
+    .status {
+      border: 1px solid;
+      border-radius: 4px;
+      padding: 4px 12px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .statusActive {
+      background: $bgActiveStatusColor;
+      color: $activeStatusTextColor;
+      border-color: $borderActiveColor;
+    }
+
+    .statusInActive {
+      color: $inactiveStatusTextColor;
+      background-color: $bgInactiveStatusColor;
+      border-color: $borderInactiveColor;
+    }
+  }
+}
+
+.mainTableWrapper {
+  min-width: 47vw;
+  min-height: 69vh;
+}
+
+// @media (max-width: 1000px) {
+//   .mainTable {
+//     td {
+//       padding: 12px;
+//     } 
+//     th {
+//       padding: 12px;
+//     }
+//   }
+// }
+
+
+
+@media (max-width: 1300px) {
+  .mainTable { 
+    td{
+      padding: 10px;
+    }
+  }
+}
+
+
+@media (max-width: 1040px) {
+  .mainTable {
+    td {
+      padding: 4px;
+
+      .status {
+      width: 120px;
+      }
+    } 
+    th {
+      padding: 6px;
+    } 
+  }
+}
+
+@media (max-width: 780px) {
+
+  
+  .mainTable {
+    td {
+      display: block;
+      padding: 18px;
+      font-size: 18px;
+
+      &:first-child {
+        padding-left: 24px;
+      }
+      &:last-child {
+        margin-right: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &::before {
+        content: attr(data-cell) " : ";
+        font-weight: 700;
+      }
+    }
+
+    th {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .mainTable {
+    td {
+      font-size: 14px;
+}
+  }
+}
